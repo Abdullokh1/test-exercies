@@ -88,20 +88,6 @@ let pagination = document.querySelector(".paginate-list");
 let page = 1;
 
 
-function paginate(array, page, count){
-  lists.innerHTML = "";
-
-  for(let i = (page - 1) * count; i < count * page; i++){
-    if(array[i] !== undefined){
-      let cards = document.createElement("li");
-      cards.className = "cards";
-      cards.innerText = array[i];
-      lists.appendChild(cards);
-    }
-  }
-}
-
-
 for(let i = 1; i < array.length / 5; i++){
   let button = document.createElement("button");
   button.className = "paginate-btn";
@@ -117,6 +103,19 @@ paginateBtn.forEach((element, index) => {
     paginate(array, page, 5);
   })
 });
+
+function paginate(array, page, count){
+  lists.innerHTML = "";
+
+  for(let i = (page - 1) * count; i < count * page; i++){
+    if(array[i] !== undefined){
+      let cards = document.createElement("li");
+      cards.className = "cards";
+      cards.innerText = array[i];
+      lists.appendChild(cards);
+    }
+  }
+}
 
 paginate(array, page, 5);
 
