@@ -5,23 +5,28 @@ function call() {
     }, 1000);
   }
 }
-
-
 call()
+
+
+// EXERCIE 0
 
 
 function getOnlyUpperCase(txt) {
   let res = txt.split('')
+  let count = 0
   res.forEach(item =>{
     if(item.match(/[A-Z]/)){
+      count++
       console.log(item);
     }
   })
+  console.log(`Count: ${count}`);
 }
 
-
-
 getOnlyUpperCase("Hello WoRLD!!!")
+
+
+// EXERCIE 1
 
 
 let startBtn = document.querySelector('.start')
@@ -49,6 +54,9 @@ resetBtn.addEventListener('click', () =>{
   box = 0
   output.innerText = 0
 })  
+
+
+// EXERCIE 2
 
 
 
@@ -121,5 +129,18 @@ paginate(array, page, 5);
 
 
 
+// EXERCISE 4 
+
+function findMaxNum(arr){
+  let res = []
+  arr.forEach(item =>{
+    if(Number(item)){
+      res.push(item)
+    }
+  })
+  return Math.max(...res)
+}
+
+console.log(findMaxNum([22,false, true, 'String', 11,55,1,53,1,3,422,6, undefined]));
 
 
