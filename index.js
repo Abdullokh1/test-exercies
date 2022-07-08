@@ -58,6 +58,53 @@ resetBtn.addEventListener('click', () =>{
 
 // EXERCIE 2
 
+let submitBtn = document.querySelector('.submit-btn')
+let answer1 = document.getElementById('true1')
+let answer2 = document.getElementById('true2')
+let answer3 = document.getElementById('true3')
+let answer4 = document.getElementById('true4')
+let time1 = document.querySelector('.time1')
+let input1 = document.querySelectorAll('.input1')
+
+let timeBox = time1.innerText
+time1.innerText = 60
+let wrapper;
+
+
+wrapper = setInterval(decrease, 1000)
+
+
+function decrease(){
+  time1.innerText -= 1
+
+  if(time1.innerText == 0){
+    clearInterval(wrapper)
+    alert('Time is out')
+  }
+}
+
+submitBtn.addEventListener('click', () =>{
+  let result = 0;
+
+  if(answer1.checked){
+    result++
+  }
+
+  if(answer2.checked){
+    result++
+  }
+
+  if(answer3.checked){
+    result++
+  }
+
+  if(answer4.checked){
+    result++
+  }
+
+  alert(`Your score is ${result}`)
+})
+
 
 
 let array = [

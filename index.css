@@ -1,7 +1,13 @@
 body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
   margin: 0;
   font-family: sans-serif;
-  overflow: hidden;
+  margin-bottom: 100px;
 }
 
 ul{
@@ -13,14 +19,6 @@ button{
   background-color: transparent;
 }
 
-.main{
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
 
 .main-list{
   display: flex;
@@ -80,4 +78,20 @@ li{
   background-color: #000;
   color: #fff;
   padding: 5px 15px;
+}
+
+.submit-btn{
+  background-color: rgb(51, 161, 51);
+  color: #fff;
+  font-weight: 500;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.timer-info{
+  background-color: rgb(163, 27, 27);
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
 }
